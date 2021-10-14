@@ -74,6 +74,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungeffect.so:system/lib/libsamsungeffect.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungearcare.so:system/lib/libsamsungearcare.so \
     vendor/samsung/j2xlte/proprietary/lib/libSamsungMusic_v5.so:system/lib/libSamsungMusic_v5.so \
+    vendor/samsung/j2xlte/proprietary/lib/libwifi-service.so:system/lib/libwifi-service.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungpowersound.so:system/lib/libsamsungpowersound.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     vendor/samsung/j2xlte/proprietary/lib/soundfx/libaudioeffectoffload.so:system/lib/soundfx/libaudioeffectoffload.so \
