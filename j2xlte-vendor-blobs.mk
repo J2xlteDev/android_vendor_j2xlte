@@ -17,6 +17,7 @@
 PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/bin/at_distributor:system/bin/at_distributor \
     vendor/samsung/j2xlte/proprietary/bin/mfgloader:system/bin/mfgloader \
+    vendor/samsung/j2xlte/proprietary/bin/gpsd:system/bin/gpsd \
     vendor/samsung/j2xlte/proprietary/bin/sprdSleepLog:system/bin/sprdSleepLog \
     vendor/samsung/j2xlte/proprietary/bin/modemd:system/bin/modemd \
     vendor/samsung/j2xlte/proprietary/bin/bih_config.sh:system/bin/bih_config.sh \
@@ -31,6 +32,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/bin/connfwexe:system/bin/connfwexe \
     vendor/samsung/j2xlte/proprietary/bin/wlandutservice:system/bin/wlandutservice \
     vendor/samsung/j2xlte/proprietary/bin/scs:system/bin/scs \
+    vendor/samsung/j2xlte/proprietary/bin/gps.cer:system/bin/gps.cer \
     vendor/samsung/j2xlte/proprietary/bin/calibration_init:system/bin/calibration_init \
     vendor/samsung/j2xlte/proprietary/bin/smdexe:system/bin/smdexe \
     vendor/samsung/j2xlte/proprietary/bin/macloader:system/bin/macloader \
@@ -40,6 +42,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/etc/connectivity_configure.ini:system/etc/connectivity_configure.ini \
     vendor/samsung/j2xlte/proprietary/etc/feature_default.xml:system/etc/feature_default.xml \
     vendor/samsung/j2xlte/proprietary/etc/floating_feature.xml:system/etc/floating_feature.xml \
+    vendor/samsung/j2xlte/proprietary/etc/gps.xml:system/etc/gps.xml \
     vendor/samsung/j2xlte/proprietary/etc/nwk_info.xml:system/etc/nwk_info.xml \
     vendor/samsung/j2xlte/proprietary/etc/purenandpackages_pref.txt:system/etc/purenandpackages_pref.txt \
     vendor/samsung/j2xlte/proprietary/etc/purenandpackages.txt:system/etc/purenandpackages.txt \
@@ -50,11 +53,13 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/etc/firmware/sc2331_fdl.bin:system/etc/firmware/sc2331_fdl.bin \
     vendor/samsung/j2xlte/proprietary/etc/firmware/sc2331_fw.bin:system/etc/firmware/sc2331_fw.bin \
     vendor/samsung/j2xlte/proprietary/lib/hw/sensors.sc8830.so:system/lib/hw/sensors.sc8830.so \
+    vendor/samsung/j2xlte/proprietary/lib/hw/gps.default.so:system/lib/hw/gps.default.so \
     vendor/samsung/j2xlte/proprietary/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
     vendor/samsung/j2xlte/proprietary/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
     vendor/samsung/j2xlte/proprietary/lib/libatparser.so:system/lib/libatparser.so \
     vendor/samsung/j2xlte/proprietary/lib/libcordon.so:system/lib/libcordon.so \
     vendor/samsung/j2xlte/proprietary/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
+    vendor/samsung/j2xlte/proprietary/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     vendor/samsung/j2xlte/proprietary/lib/libaudiosa.so:system/lib/libaudiosa.so \
     vendor/samsung/j2xlte/proprietary/lib/libmysound.so:system/lib/libmysound.so \
     vendor/samsung/j2xlte/proprietary/lib/libSamsungPreProcess.so:system/lib/libSamsungPreProcess.so \
@@ -74,7 +79,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungeffect.so:system/lib/libsamsungeffect.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungearcare.so:system/lib/libsamsungearcare.so \
     vendor/samsung/j2xlte/proprietary/lib/libSamsungMusic_v5.so:system/lib/libSamsungMusic_v5.so \
-    vendor/samsung/j2xlte/proprietary/lib/libwifi-service.so:system/lib/libwifi-service.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungpowersound.so:system/lib/libsamsungpowersound.so \
     vendor/samsung/j2xlte/proprietary/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     vendor/samsung/j2xlte/proprietary/lib/soundfx/libaudioeffectoffload.so:system/lib/soundfx/libaudioeffectoffload.so \
@@ -104,13 +108,24 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/j2xlte/proprietary/lib/libsfextwmf.so:system/lib/libsfextwmf.so \
     vendor/samsung/j2xlte/proprietary/lib/libshdace.so:system/lib/libshdace.so \
     vendor/samsung/j2xlte/proprietary/lib/libsimageis_jni.so:system/lib/libsimageis_jni.so \
+    vendor/samsung/j2xlte/proprietary/lib/libwrappergps.so:system/lib/libwrappergps.so \
     vendor/samsung/j2xlte/proprietary/lib/libaccauthentication_jni.so:system/lib/libaccauthentication_jni.so \
+    vendor/samsung/j2xlte/proprietary/lib/libaf_running.so:system/lib/libaf_running.so \
+    vendor/samsung/j2xlte/proprietary/lib/libAl_Awb.so:system/lib/libAl_Awb.so \
+    vendor/samsung/j2xlte/proprietary/lib/libAl_Awb_Sp.so:system/lib/libAl_Awb_Sp.so \
     vendor/samsung/j2xlte/proprietary/lib/libboost.so:system/lib/libboost.so \
+    vendor/samsung/j2xlte/proprietary/lib/libbt-codec_aptx.so:system/lib/libbt-codec_aptx.so \
+    vendor/samsung/j2xlte/proprietary/lib/libbt-aptx-4.0.3.so:system/lib/libbt-aptx-4.0.3.so \
+    vendor/samsung/j2xlte/proprietary/lib/libbt-codec_sshd.so:system/lib/libbt-codec_sshd.so \
+    vendor/samsung/j2xlte/proprietary/lib/libbt-iopdb.so:system/lib/libbt-iopdb.so \
+    vendor/samsung/j2xlte/proprietary/lib/libbt-iopdb_mod.so:system/lib/libbt-iopdb_mod.so \
     vendor/samsung/j2xlte/proprietary/lib/libvariablespeed.so:system/lib/libvariablespeed.so \
     vendor/samsung/j2xlte/proprietary/lib/libvtmanager.so:system/lib/libvtmanager.so \
     vendor/samsung/j2xlte/proprietary/lib/libvtstack.so:system/lib/libvtstack.so \
     vendor/samsung/j2xlte/proprietary/lib/libengmode.so:system/lib/libengmode.so \
-    vendor/samsung/j2xlte/proprietary/vendor/firmware/libpn548ad_fw.so:system/vendor/firmware/libpn548ad_fw.so \
+    vendor/samsung/j2xlte/proprietary/lib/libmorpho_easy_hdr.so:system/lib/libmorpho_easy_hdr.so \
+    vendor/samsung/j2xlte/proprietary/lib/libreference-ril.so:system/lib/libreference-ril.so \
+    vendor/samsung/j2xlte/proprietary/lib/libwifi-service.so:system/lib/libwifi-service.so \
     vendor/samsung/j2xlte/proprietary/vendor/firmware/vbc_eq:system/vendor/firmware/vbc_eq \
     vendor/samsung/j2xlte/proprietary/vendor/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     vendor/samsung/j2xlte/proprietary/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
