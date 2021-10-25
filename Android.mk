@@ -17,6 +17,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),j3xlte)
+ifeq ($(TARGET_DEVICE),j2xlte)
 
 endif
